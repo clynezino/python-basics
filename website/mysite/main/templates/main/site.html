@@ -1,0 +1,19 @@
+<div class="col s12 m4 l4">
+    <ul class="collapsible popout">
+        {% for site in sidebar %}
+            {% if forloop.counter0 == this_sit_idx %}
+                <li class="active">
+                    <div class="collapsible-header">{{site.site_title}}<br>(currently viewing)</div>
+                </li>
+            {% else %}
+                <li>
+                    <div class="collapsible-header">{{site.site_title}}</div>
+                    <div class="collapsible-body">
+                        <p><a href="/{{site.site_slug}}"><button class="btn waves-effect waves-light right-align" style="background-color:yellow; color:black">Go</button></a></p>
+
+                    </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
